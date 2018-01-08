@@ -16,7 +16,8 @@ namespace IO_lab
             //new Zad4();
             //new Zad6();
             //new Zad7();
-            new Zad8();
+            //new Zad8();
+            new ZadIV();
             Console.ReadKey();
         }
     }
