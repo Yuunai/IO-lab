@@ -51,6 +51,7 @@
     <Compile Include="Zad6.cs" />
     <Compile Include="Zad7.cs" />
     <Compile Include="Zad8.cs" />
+    <Compile Include="ZadIII.cs" />
     <Compile Include="ZadIV.cs" />
   </ItemGroup>
   <ItemGroup>
