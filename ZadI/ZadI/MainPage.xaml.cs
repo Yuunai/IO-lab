@@ -22,14 +22,15 @@ namespace ZadI
     /// </summary>
     public partial class MainPage : Page
     {
-        private void loadImage(Object stateInfo)
+        private async Task loadImage(string fileName)
         {
-            string fileName = (string)((object[])stateInfo)[0];
-            this.Dispatcher.Invoke(() =>
+            await Task.Run(() =>
             {
-                bitmap.Source = new BitmapImage(new Uri(fileName));
+                this.Dispatcher.Invoke(() =>
+                {
+                    bitmap.Source = new BitmapImage(new Uri(fileName));
+                });
             });
-
         }
 
         public MainPage()
@@ -37,7 +38,7 @@ namespace ZadI
             InitializeComponent();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private async void button_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog op = new OpenFileDialog();
             op.Title = "Select a picture";
@@ -46,7 +47,7 @@ namespace ZadI
               "Portable Network Graphic (*.png)|*.png";
             if (op.ShowDialog() == true)
             {
-                ThreadPool.QueueUserWorkItem(loadImage, new object[] { op.FileName});
+                await loadImage(op.FileName);
             }
         }
     }
