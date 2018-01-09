@@ -55,11 +55,10 @@ namespace IO_lab
         class Server
         {
             private TcpListener server;
-            private byte[] buffer;
 
             public Server()
             {
-                TcpListener server = new TcpListener(IPAddress.Any, 2048);
+                this.server = new TcpListener(IPAddress.Any, 2048);
                 server.Start();
 
                 ThreadPool.QueueUserWorkItem(serverThread, new object[] { server });

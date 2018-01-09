@@ -51,6 +51,7 @@
     <Compile Include="Zad6.cs" />
     <Compile Include="Zad7.cs" />
     <Compile Include="Zad8.cs" />
+    <Compile Include="ZadII.cs" />
     <Compile Include="ZadIII.cs" />
     <Compile Include="ZadIV.cs" />
   </ItemGroup>
@@ -59,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="input.txt" />
+    <Content Include="matrix.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

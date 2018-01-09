@@ -18,7 +18,10 @@ namespace IO_lab
             //new Zad7();
             //new Zad8();
             //new ZadIV();
-            new ZadIII();
+            //new ZadIII();
+            //new ZadII();
+
+            Console.WriteLine("Wszystko działa!");
             Console.ReadKey();
         }
     }
