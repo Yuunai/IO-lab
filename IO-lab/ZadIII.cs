@@ -27,9 +27,9 @@ namespace IO_lab
             byte[] array = { 71, 65, 66, 70, 72, 75, 79};
 
             writeToFile("file.txt", array).ContinueWith(
-                async (t) =>
+                (t) =>
                 {
-                    Console.WriteLine("Wiadomość zapisana!");
+                     Console.WriteLine("Wiadomość zapisana!");
                 });
         }
     }
